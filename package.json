@@ -7,10 +7,14 @@
 		"test": "jest"
 	},
 	"dependencies": {
+		"babel-loader": "^6.4.1",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-react": "^6.24.1",
 		"react": "16.0.0-alpha.6",
 		"react-dom": "^15.5.4",
 		"react-native": "0.43.3",
-		"react-native-web": "^0.0.81"
+		"react-native-web": "^0.0.81",
+		"webpack": "^2.4.1"
 	},
 	"devDependencies": {
 		"babel-jest": "19.0.0",
