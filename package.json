@@ -20,7 +20,8 @@
 		"babel-jest": "19.0.0",
 		"babel-preset-react-native": "1.9.1",
 		"jest": "19.0.2",
-		"react-test-renderer": "16.0.0-alpha.6"
+		"react-test-renderer": "16.0.0-alpha.6",
+		"webpack-dev-server": "^2.4.2"
 	},
 	"jest": {
 		"preset": "react-native"
