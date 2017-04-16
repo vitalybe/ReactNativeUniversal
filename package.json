@@ -3,7 +3,8 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"android": "react-native run-android",
+		"web": "./node_modules/.bin/webpack-dev-server --inline",
 		"test": "jest"
 	},
 	"dependencies": {
