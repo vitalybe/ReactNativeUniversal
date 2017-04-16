@@ -6,6 +6,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import Service from './app/service'
 
 const styles = StyleSheet.create({
   list: {
@@ -38,6 +39,8 @@ export default class FriendsList extends Component {
   }
 
   render() {
+    (new Service()).func()
+
     return (
       <ListView
         dataSource={this.state.ds}
