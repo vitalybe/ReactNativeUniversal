@@ -65,10 +65,10 @@ export default class FriendsList extends Component {
         dataSource={this.state.ds}
         style={styles.list}
         renderRow={(friend) =>
-          <View onPress={() => this.animate()} style={[styles.friend, { transform: [{ translateX: this.state.translateValue }]}]}>
+          <Animated.View onPress={() => this.animate()} style={[styles.friend, { transform: [{ translateX: this.state.translateValue }]}]}>
             <Image style={styles.avatar} source={{ uri: friend.avatarUrl }} />
             <Text style={styles.name}>{friend.firstName} {friend.lastName}</Text>
-          </View>
+          </Animated.View>
         }/>
     );
   }
