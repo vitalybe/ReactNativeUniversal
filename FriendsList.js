@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   Image,
   ListView,
   StyleSheet,
   Text,
   View,
+  Animated,
+  TouchableOpacity,
 } from 'react-native';
 import Service from './app/service'
 
@@ -32,25 +34,42 @@ const styles = StyleSheet.create({
 export default class FriendsList extends Component {
   constructor(props) {
     super(props);
-    const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
       ds: ds.cloneWithRows(props.friends),
+      translateValue: new Animated.Value(0),
     };
   }
 
+  animate() {
+    Animated.sequence([
+      Animated.timing(this.state.translateValue, {
+        toValue: 50,
+        duration: 200,
+      }),
+      Animated.timing(this.state.translateValue, {
+        toValue: -50,
+        duration: 200,
+      }),
+      Animated.timing(this.state.translateValue, {
+        toValue: 0,
+        duration: 200,
+      })
+    ]).start();
+  }
+
   render() {
-    (new Service()).func()
 
     return (
       <ListView
         dataSource={this.state.ds}
         style={styles.list}
         renderRow={(friend) =>
-          <View style={styles.friend}>
+          <View onPress={() => this.animate()} style={[styles.friend, { transform: [{ translateX: this.state.translateValue }]}]}>
             <Image style={styles.avatar} source={{ uri: friend.avatarUrl }} />
             <Text style={styles.name}>{friend.firstName} {friend.lastName}</Text>
           </View>
-        } />
+        }/>
     );
   }
 }
