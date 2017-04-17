@@ -65,7 +65,10 @@ export default class FriendsList extends Component {
         dataSource={this.state.ds}
         style={styles.list}
         renderRow={(friend) =>
-          <Animated.View onPress={() => this.animate()} style={[styles.friend, { transform: [{ translateX: this.state.translateValue }]}]}>
+          <Animated.View  style={[styles.friend, { transform: [{ translateX: this.state.translateValue }]}]}>
+            <TouchableOpacity onPress={() => this.animate()}>
+              <Text>Click me!</Text>
+            </TouchableOpacity>
             <Image style={styles.avatar} source={{ uri: friend.avatarUrl }} />
             <Text style={styles.name}>{friend.firstName} {friend.lastName}</Text>
           </Animated.View>
