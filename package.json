@@ -2,10 +2,11 @@
 	"name": "ReactNativeUniversal",
 	"version": "0.0.1",
 	"private": true,
-	"main": "main.js",
+	"main": "main.electron.js",
 	"scripts": {
 		"android": "react-native run-android",
-		"web": "./node_modules/.bin/webpack-dev-server --inline",
+		"web": "node webpack/scripts/start.js",
+		"web-build": "node webpack/scripts/build.js",
 		"desktop": "electron .",
 		"test": "jest"
 	},

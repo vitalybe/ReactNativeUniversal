@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-import FriendsList from './FriendsList';
+import FriendsList from './app/FriendsList';
 
 const friends = [
   {
