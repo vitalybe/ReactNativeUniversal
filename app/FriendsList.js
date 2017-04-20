@@ -8,7 +8,7 @@ import {
   Animated,
   TouchableOpacity,
 } from 'react-native';
-import Service from './app/service'
+import Service from './service'
 
 const styles = StyleSheet.create({
   list: {
