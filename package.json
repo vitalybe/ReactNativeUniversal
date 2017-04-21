@@ -3,11 +3,16 @@
 	"version": "0.0.1",
 	"private": true,
 	"main": "main.electron.js",
+	
+	"###": "per https://medium.freecodecamp.com/building-an-electron-application-with-create-react-app-97945861647c",
+	"homepage": "./",
+	
 	"scripts": {
 		"android": "react-native run-android",
 		"web": "node webpack/scripts/start.js",
 		"web-build": "node webpack/scripts/build.js",
 		"desktop": "ELECTRON_START_URL=http://localhost:3000 electron .",
+		"desktop-build": "electron-packager --overwrite --out=build-electron .",
 		"test": "jest"
 	},
 	"dependencies": {
@@ -37,6 +42,7 @@
 		"connect-history-api-fallback": "1.3.0",
 		"cross-spawn": "4.0.2",
 		"css-loader": "0.26.1",
+		"electron-packager": "^8.6.0",
 		"eslint": "3.16.1",
 		"eslint-config-react-app": "^0.6.2",
 		"eslint-loader": "1.6.0",
