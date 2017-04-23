@@ -6,9 +6,11 @@
 	"###": "per https://medium.freecodecamp.com/building-an-electron-application-with-create-react-app-97945861647c",
 	"homepage": "./",
 	"scripts": {
+		"web": "node webpack/scripts/start.js",
+		"web-build": "node webpack/scripts/build.js",
 		"android": "react-native run-android",
-		"desktop": "concurrently 'node webpack/scripts/start.js' 'wait-on tcp:localhost:3000 && ELECTRON_START_URL=http://localhost:3000 electron .'",
-		"desktop-build": "node webpack/scripts/build.js && electron-packager --overwrite --out=build-electron .",
+		"desktop": "concurrently 'node webpack/scripts/start.js --electron' 'wait-on tcp:localhost:3000 && ELECTRON_START_URL=http://localhost:3000 electron .'",
+		"desktop-build": "node webpack/scripts/build.js --electron && electron-packager --overwrite --out=build-electron .",
 		"test": "jest"
 	},
 	"dependencies": {
