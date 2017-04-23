@@ -207,5 +207,7 @@ module.exports = {
     fs: 'empty',
     net: 'empty',
     tls: 'empty'
-  }
+  },
+
+  target: "electron-renderer"
 };

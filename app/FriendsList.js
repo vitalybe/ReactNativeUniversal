@@ -56,9 +56,12 @@ export default class FriendsList extends Component {
         duration: 200,
       })
     ]).start();
+    
   }
 
   render() {
+
+    let service = new Service();
 
     return (
       <ListView
@@ -70,7 +73,7 @@ export default class FriendsList extends Component {
               <Text>Click me!</Text>
             </TouchableOpacity>
             <Image style={styles.avatar} source={{ uri: friend.avatarUrl }} />
-            <Text style={styles.name}>{friend.firstName} {friend.lastName}</Text>
+            <Text onPress={() => service.func()} style={styles.name}>{friend.firstName} {friend.lastName}</Text>
           </Animated.View>
         }/>
     );
