@@ -55,5 +55,5 @@ app.on('activate', () => {
 })
 
 ipcMain.on("fromWebToNative", (event) => {
-  dialog.showMessageBox(win, { message: "I was invoked by web" })
+  dialog.showMessageBox(win, { message: "I am electron!" })
 });
