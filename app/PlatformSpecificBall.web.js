@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import {
   Image,
   StyleSheet,
-  Text,
-  View,
-  Animated,
   TouchableOpacity,
 } from 'react-native';
 import Service from './service'
