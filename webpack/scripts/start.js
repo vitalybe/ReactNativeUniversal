@@ -28,12 +28,13 @@ var cli = useYarn ? 'yarn' : 'npm';
 var isInteractive = process.stdout.isTTY;
 
 var config = null;
-if(process.argv.some(arg => arg.indexOf('--electron') > -1)) {
+var isElectron = process.argv.some(arg => arg.indexOf('--electron') > -1);
+
+if(isElectron) {
   config = require('../config/webpack.config.electron.dev');
 } else {
   config = require('../config/webpack.config.dev');
 }
-
 
 // Warn and crash if required files are missing
 if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
@@ -282,10 +283,13 @@ function runDevServer(host, port, protocol) {
     if (isInteractive) {
       clearConsole();
     }
-    // console.log(chalk.cyan('Starting the development server...'));
-    // console.log();
 
-    // openBrowser(protocol + '://' + host + ':' + port + '/');
+    if(!isElectron) {
+      console.log(chalk.cyan('Starting the development server...'));
+      console.log();
+
+      openBrowser(protocol + '://' + host + ':' + port + '/');
+    }
   });
 }
 
