@@ -65,3 +65,7 @@ Missing features:
 * Test
 
 
+License
+-------
+
+This project is [MIT licensed](LICENSE).
