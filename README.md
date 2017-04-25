@@ -1,9 +1,12 @@
 Universal React - Android, Electron (Desktop) and Web
 =====================================================
 
-Electron             |  Web |         Android                   |
-:-------------------------:|:-------------------------:|:---------
+Electron             |  Web |         Android                       |
+|:-------------------------:|:-------------------------:|:---------:|
 ![](images/electron.gif) | ![](images/web.gif) | ![](images/android.gif)
+
+About
+-----
 
 This sample demonstrates the usage of React Native in in the **desktop, web and mobile** environment **using the same code**.
 
