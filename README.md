@@ -41,9 +41,9 @@ Structure
 
 **Platform specific components**
 
-By default all the javascript files are shared by all projects. To create a platform specific file, suffix it accordingly.
+By default all the javascript files are shared by all the platforms. To create a platform specific file, suffix it accordingly.
 
-For example if have a generic `Ball.js` file and would like Electron to have its own platform specific version, we'd create a new file `Ball.electron.js`.
+For example if you have a generic `Ball.js` file and would like Electron to have its own platform specific version, we'd create a new file `Ball.electron.js`.
 
 The file will be imported everywhere without extension: `import Ball from './Ball`. All the platforms will import the generic file and only Electron will import its own platform file.
 
