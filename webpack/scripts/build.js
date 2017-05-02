@@ -26,7 +26,7 @@ var config = null;
 if(process.argv.some(arg => arg.indexOf('--electron') > -1)) {
   config = require('../config/webpack.config.electron.prod');
 } else {
-  config = require('../config/webpack.config.dev');
+  config = require('../config/webpack.config.prod');
 }
 
 // Warn and crash if required files are missing
