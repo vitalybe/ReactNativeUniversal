@@ -66,7 +66,6 @@ What's missing
 
 Missing features:
 
-* iOS demonstration (Should be really easy to add, PRs are welcome)
 * Test
 
 
