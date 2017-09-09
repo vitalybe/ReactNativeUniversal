@@ -5,6 +5,11 @@ Electron             |  Web |         Android                       |
 |:-------------------------:|:-------------------------:|:---------:|
 ![](images/electron.gif) | ![](images/web.gif) | ![](images/android.gif)
 
+Android                       | iOS
+|:-------------------------:|:---------:|
+![](images/android.gif) | ![](images/ios.gif)
+
+
 About
 -----
 
