@@ -10,6 +10,11 @@ Android                       | iOS
 ![](images/android.gif) | ![](images/ios.gif)
 
 
+Android                       | iOS
+|:-------------------------:|:---------:|
+![](images/android.gif) | ![](images/ios.gif)
+
+
 About
 -----
 
