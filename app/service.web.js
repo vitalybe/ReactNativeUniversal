@@ -1,5 +1,5 @@
 export default class MyService {
-  func() {
-    alert("I am web!")
-  }
+    func() {
+        alert("I am web!")
+    }
 }
