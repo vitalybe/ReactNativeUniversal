@@ -1,9 +1,14 @@
 Universal React - Android, Electron (Desktop) and Web
 =====================================================
 
-Electron             |  Web |         Android                       |
-|:-------------------------:|:-------------------------:|:---------:|
-![](images/electron.gif) | ![](images/web.gif) | ![](images/android.gif)
+Electron             |  Web |
+|:-------------------------:|:-------------------------:|
+![](images/electron.gif) | ![](images/web.gif)
+
+Android                       | iOS
+|:-------------------------:|:---------:|
+![](images/android.gif) | ![](images/ios.gif)
+
 
 About
 -----
@@ -61,7 +66,6 @@ What's missing
 
 Missing features:
 
-* iOS demonstration (Should be really easy to add, PRs are welcome)
 * Test
 
 

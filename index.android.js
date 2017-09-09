@@ -5,19 +5,14 @@
  */
 
 import React, {Component} from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import {AppRegistry} from 'react-native';
 
 import BallsList from './app/BallsList';
 
 export default class ReactNativeUniversal extends Component {
-  render() {
-    return <BallsList/>;
-  }
+    render() {
+        return <BallsList/>;
+    }
 }
 
 AppRegistry.registerComponent('ReactNativeUniversal', () => ReactNativeUniversal);

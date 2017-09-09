@@ -1,59 +1,53 @@
 import React, {Component} from 'react';
-import {
-  Image,
-  StyleSheet,
-  Animated,
-  TouchableOpacity,
-} from 'react-native';
+import {Animated, Image, StyleSheet, TouchableOpacity,} from 'react-native';
 
-const image = require('../images/Smiley.png')
+const image = require('../images/Smiley.png');
 
 const styles = StyleSheet.create({
-  image: {
-    width: 50,
-    height: 50,
-    borderRadius: 50,
-    margin: 10,
-  }
+    image: {
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+        margin: 10,
+    }
 });
 
 
-
 export default class Ball extends Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-      translateValue: new Animated.Value(0),
-    };
-  }
+        this.state = {
+            translateValue: new Animated.Value(0),
+        };
+    }
 
-  animate() {
-    Animated.sequence([
-      Animated.timing(this.state.translateValue, {
-        toValue: 50,
-        duration: 200,
-      }),
-      Animated.timing(this.state.translateValue, {
-        toValue: -50,
-        duration: 200,
-      }),
-      Animated.timing(this.state.translateValue, {
-        toValue: 0,
-        duration: 200,
-      })
-    ]).start();
+    animate() {
+        Animated.sequence([
+            Animated.timing(this.state.translateValue, {
+                toValue: 50,
+                duration: 200,
+            }),
+            Animated.timing(this.state.translateValue, {
+                toValue: -50,
+                duration: 200,
+            }),
+            Animated.timing(this.state.translateValue, {
+                toValue: 0,
+                duration: 200,
+            })
+        ]).start();
 
-  }
+    }
 
-  render() {
+    render() {
 
-    return (
-      <Animated.View style={[styles.ball, {transform: [{translateX: this.state.translateValue}]}]}>
-        <TouchableOpacity onPress={() => this.animate()}>
-          <Image style={styles.image} source={image} />
-        </TouchableOpacity>
-      </Animated.View>
-    );
-  }
+        return (
+            <Animated.View style={[styles.ball, {transform: [{translateX: this.state.translateValue}]}]}>
+                <TouchableOpacity onPress={() => this.animate()}>
+                    <Image style={styles.image} source={image}/>
+                </TouchableOpacity>
+            </Animated.View>
+        );
+    }
 }
